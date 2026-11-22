@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu | Desi Madrasi — Idli, Dosa, Meals & Chettinad in Kondapur</title>
+    <meta name="description" content="Explore the Desi Madrasi menu: morning tiffin, 10+ dosa varieties, banana leaf meals, Chettinad curries, evening snacks, sweets and filter kaapi in Kondapur, Hyderabad." />
+    <meta name="theme-color" content="#3d070e" />
+    <link rel="icon" type="image/jpeg" href="/desi-madrasi-restaurant-logo.jpeg" />
+    <link rel="apple-touch-icon" href="/desi-madrasi-restaurant-logo.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Mulish:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@500&family=Noto+Serif+Telugu:wght@500&family=Noto+Serif+Malayalam:wght@500&family=Noto+Serif+Kannada:wght@500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="page-hero">
+        <div class="ph-bg" data-img="dosaLeaf"></div>
+        <div class="ph-kolam"></div>
+        <div class="container">
+          <nav class="crumbs fade-up" aria-label="Breadcrumb"><a href="/" data-link>Home</a><span>✦</span><span>Menu</span></nav>
+          <h1><span class="line" style="--l:0"><span>From the tawa,</span></span><span class="line" style="--l:1"><span>to your <em>leaf</em></span></span></h1>
+          <p class="fade-up" style="--l:2">Seventy-odd dishes across tiffin, dosa, meals, Chettinad specials, snacks, sweets and kaapi. Use the tabs to wander, or search for the one you are already craving.</p>
+        </div>
+      </section>
+
+      <div class="menu-toolbar">
+        <div class="container">
+          <div class="menu-tabs" role="tablist" aria-label="Menu categories"></div>
+          <label class="menu-search"><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg><input type="search" placeholder="Search dosa, kaapi, biryani…" aria-label="Search the menu" /></label>
+          <label class="veg-toggle"><input type="checkbox" id="vegOnly" /> Veg only</label>
+        </div>
+      </div>
+
+      <section class="texture" style="padding-bottom: 90px">
+        <div class="container">
+          <div id="menu-list"></div>
+          <p class="menu-empty">Nothing matches that search — but ask us, and the kitchen may just make it for you.</p>
+          <div class="menu-note" data-reveal="up">
+            <div class="legend"><span><i class="mi-mark"></i>Vegetarian</span><span><i class="mi-mark nv"></i>Non-vegetarian</span></div>
+            <span>All prices in ₹ and exclusive of GST. Spice levels can be adjusted — just tell your server. Please let us know about any allergies.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark texture">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow light" data-reveal="up">Combos &amp; Platters</span>
+            <h2 class="title" data-reveal="up">Can’t decide? <em>Have a little of everything.</em></h2>
+            <p class="lead" data-reveal="up">Thoughtfully assembled platters for first-timers, hungry families and anyone who believes one dish is never enough.</p>
+          </div>
+          <div class="thali-cards" data-stagger="150">
+            <div class="thali-card">
+              <h3>Tiffin Platter</h3>
+              <div class="t-price">₹199</div>
+              <ul><li>Mini idli &amp; one medu vada</li><li>Mini ghee roast dosa</li><li>Ven pongal &amp; rava kesari</li><li>Sambar &amp; three chutneys</li><li>Small filter kaapi</li></ul>
+              <a href="/contact.html#reserve" class="btn btn-ghost-light btn-sm" data-link>Book a Table</a>
+            </div>
+            <div class="thali-card featured">
+              <span class="ribbon">Most loved</span>
+              <h3>Desi Madrasi Leaf Meals</h3>
+              <div class="t-price">₹249</div>
+              <ul><li>Unlimited rice, sambar &amp; rasam</li><li>Kootu, poriyal &amp; kara kuzhambu</li><li>Appalam, vadai &amp; pickle</li><li>Curd, buttermilk &amp; payasam</li><li>Served on a fresh banana leaf</li></ul>
+              <a href="/contact.html#reserve" class="btn btn-sm" data-link>Reserve for Lunch</a>
+            </div>
+            <div class="thali-card">
+              <h3>Chettinad Feast for Two</h3>
+              <div class="t-price">₹799</div>
+              <ul><li>Chettinad pepper chicken</li><li>Mutton sukka or meen kuzhambu</li><li>Four Malabar parottas</li><li>Jeera rice &amp; egg roast</li><li>Two semiya payasam</li></ul>
+              <a href="/contact.html#reserve" class="btn btn-ghost-light btn-sm" data-link>Book a Table</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/js/pages/menu.js"></script>
+  </body>
+</html>

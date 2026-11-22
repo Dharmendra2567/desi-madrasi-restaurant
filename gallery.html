@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Food & Moments at Desi Madrasi, Kondapur Hyderabad</title>
+    <meta name="description" content="A visual feast from Desi Madrasi — dosas, idlis, banana leaf meals, Chettinad curries, filter kaapi and the warm moments shared at our tables in Kondapur." />
+    <meta name="theme-color" content="#3d070e" />
+    <link rel="icon" type="image/jpeg" href="/desi-madrasi-restaurant-logo.jpeg" />
+    <link rel="apple-touch-icon" href="/desi-madrasi-restaurant-logo.jpeg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Mulish:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@500&family=Noto+Serif+Telugu:wght@500&family=Noto+Serif+Malayalam:wght@500&family=Noto+Serif+Kannada:wght@500&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <section class="page-hero">
+        <div class="ph-bg" data-img="spiceThali"></div>
+        <div class="ph-kolam"></div>
+        <div class="container">
+          <nav class="crumbs fade-up" aria-label="Breadcrumb"><a href="/" data-link>Home</a><span>✦</span><span>Gallery</span></nav>
+          <h1><span class="line" style="--l:0"><span>A feast for</span></span><span class="line" style="--l:1"><span>the <em>eyes first</em></span></span></h1>
+          <p class="fade-up" style="--l:2">Golden dosas, glistening ghee, steaming tumblers and the happy faces around our tables. Tap any picture to see it up close.</p>
+        </div>
+      </section>
+
+      <section class="section texture">
+        <div class="container">
+          <div class="gallery-filters" role="tablist" data-reveal="up">
+            <button class="menu-tab active" data-filter="all">All</button>
+            <button class="menu-tab" data-filter="food">Food</button>
+            <button class="menu-tab" data-filter="ambience">Ambience</button>
+            <button class="menu-tab" data-filter="kitchen">Kitchen</button>
+            <button class="menu-tab" data-filter="moments">Moments</button>
+          </div>
+          <div class="masonry"></div>
+        </div>
+      </section>
+
+      <section class="section section-sandal" style="padding-top: 0">
+        <div class="container">
+          <a class="video-band" data-reveal="mask" data-social="instagram" target="_blank" rel="noopener">
+            <img data-img="filterCoffee" alt="" loading="lazy" />
+            <div>
+              <div class="play-ring"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+              <span class="eyebrow light">Behind the Counter</span>
+              <h2 class="title" style="color: var(--ivory)">Follow the <em>kaapi pour</em> on Instagram</h2>
+              <p style="max-width: 50ch; margin: 0 auto; opacity: .85">Reels from our kitchen, festival specials and the occasional dosa that came out almost too perfect to eat.</p>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <div class="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+        <button class="lb-btn lb-close" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"/></svg></button>
+        <button class="lb-btn lb-prev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></button>
+        <figure><img alt="" /><figcaption></figcaption></figure>
+        <button class="lb-btn lb-next" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></button>
+      </div>
+    </main>
+    <script type="module" src="/src/js/pages/gallery.js"></script>
+  </body>
+</html>
