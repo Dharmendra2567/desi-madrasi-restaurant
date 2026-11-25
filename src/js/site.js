@@ -5,6 +5,9 @@ export const SITE = {
   name: 'Desi Madrasi',
   fullName: 'Desi Madrasi Restaurant',
   tagline: 'Tradition meets the taste',
+  // Live website address — used for canonical links, sitemap, social previews and structured data.
+  // PLACEHOLDER: change to the real domain once the site is deployed (no trailing slash).
+  url: 'https://desimadrasirestaurant.in',
   phone: '8106787523',
   phoneDisplay: '+91 81067 87523',
   phoneIntl: '918106787523',

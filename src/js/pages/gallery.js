@@ -44,7 +44,7 @@ initSite('gallery')
 const items = [...grid.children]
 document.querySelectorAll('.gallery-filters button').forEach((btn) =>
   btn.addEventListener('click', () => {
-    document.querySelectorAll('.gallery-filters button').forEach((b) => b.classList.toggle('active', b === btn))
+    document.querySelectorAll('.gallery-filters button').forEach((b) => { b.classList.toggle('active', b === btn); b.setAttribute('aria-pressed', String(b === btn)) })
     const f = btn.dataset.filter
     items.forEach((it) => {
       const show = f === 'all' || it.dataset.cat === f

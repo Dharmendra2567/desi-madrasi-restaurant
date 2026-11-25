@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery | Food & Moments at Desi Madrasi, Kondapur Hyderabad</title>
-    <meta name="description" content="A visual feast from Desi Madrasi — bagara, biryani, sukka, banana leaf meals and the warm moments shared at our tables in Kondapur." />
+    <title>Gallery | Desi Madrasi Restaurant, Kondapur</title>
+    <meta name="description" content="Real photos from Desi Madrasi — bagara, biryani, sukka and banana leaf meals, plus the moments shared at our tables in Kondapur." />
     <meta name="theme-color" content="#3d070e" />
     <link rel="icon" type="image/jpeg" href="/desi-madrasi-restaurant-logo.jpeg" />
     <link rel="apple-touch-icon" href="/desi-madrasi-restaurant-logo.jpeg" />
@@ -28,13 +28,13 @@
 
       <section class="section texture">
         <div class="container">
-          <div class="gallery-filters" role="tablist" data-reveal="up">
-            <button class="menu-tab active" data-filter="all">All</button>
-            <button class="menu-tab" data-filter="real">Real Photos</button>
-            <button class="menu-tab" data-filter="food">Food</button>
-            <button class="menu-tab" data-filter="ambience">Ambience</button>
-            <button class="menu-tab" data-filter="kitchen">Kitchen</button>
-            <button class="menu-tab" data-filter="moments">Moments</button>
+          <div class="gallery-filters" role="group" aria-label="Filter photos" data-reveal="up">
+            <button class="menu-tab active" data-filter="all" aria-pressed="true">All</button>
+            <button class="menu-tab" data-filter="real" aria-pressed="false">Real Photos</button>
+            <button class="menu-tab" data-filter="food" aria-pressed="false">Food</button>
+            <button class="menu-tab" data-filter="ambience" aria-pressed="false">Ambience</button>
+            <button class="menu-tab" data-filter="kitchen" aria-pressed="false">Kitchen</button>
+            <button class="menu-tab" data-filter="moments" aria-pressed="false">Moments</button>
           </div>
           <div class="masonry"></div>
         </div>
