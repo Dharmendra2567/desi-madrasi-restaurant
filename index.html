@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Desi Madrasi Restaurant | Authentic South Indian Food in Kondapur, Hyderabad</title>
-    <meta name="description" content="Desi Madrasi — authentic Madras-style South Indian restaurant in Kondapur, Hyderabad. Stone-ground idli & dosa, banana leaf meals, Chettinad curries and filter kaapi. Dine-in, takeaway & catering." />
+    <title>Desi Madrasi Restaurant | Bagara, Biryani &amp; Sukka in Kondapur, Hyderabad</title>
+    <meta name="description" content="Desi Madrasi — Hyderabadi bagara and dum biryani meet Madras-style biryani and sukka in Kondapur, Hyderabad. Combos, thalis, curries &amp; fries, served on a banana leaf. Dine-in, takeaway &amp; catering." />
     <meta name="theme-color" content="#3d070e" />
     <meta property="og:title" content="Desi Madrasi Restaurant — Kondapur, Hyderabad" />
-    <meta property="og:description" content="Madras on a banana leaf. Tiffin, meals, Chettinad specials and filter kaapi." />
+    <meta property="og:description" content="Tradition meets the taste. Bagara specials, Desi &amp; Madrasi biryani, combos and must-try sukka." />
     <link rel="icon" type="image/jpeg" href="/desi-madrasi-restaurant-logo.jpeg" />
     <link rel="apple-touch-icon" href="/desi-madrasi-restaurant-logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://images.unsplash.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Mulish:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@500&family=Noto+Serif+Telugu:wght@500&family=Noto+Serif+Malayalam:wght@500&family=Noto+Serif+Kannada:wght@500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Mulish:wght@400;600;700;800&family=Noto+Serif+Tamil:wght@500&family=Noto+Serif+Telugu:wght@500&family=Noto+Serif+Malayalam:wght@500&family=Noto+Serif+Kannada:wght@500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/styles/main.css" />
+    <script>
+      // Hide the page until the temple-door splash is mounted (first visit per session only)
+      try { if (sessionStorage.getItem('dm-entered') !== '1') document.documentElement.classList.add('pre-enter') } catch (e) {}
+    </script>
+    <style>html.pre-enter { background: #0d0503; } html.pre-enter body > :not(.entrance) { visibility: hidden; }</style>
   </head>
   <body>
     <main>
@@ -25,16 +31,16 @@
             <div class="slide-content"><div class="container"><div class="slide-text">
               <span class="slide-kicker fade-up" style="--l:0"><span class="indic">வணக்கம்</span> Welcome to Desi Madrasi</span>
               <h1 class="slide-title"><span class="line" style="--l:0"><span>Step inside a</span></span><span class="line" style="--l:1"><span><em>Madras home</em> kitchen</span></span></h1>
-              <p class="slide-desc fade-up" style="--l:2">Brass lamps, jasmine in the air and the hiss of batter meeting a hot tawa — Kondapur’s own corner of Chennai has its doors open for you.</p>
+              <p class="slide-desc fade-up" style="--l:2">Brass lamps, the aroma of bagara rice and a handi of biryani just opened — Kondapur’s home of Desi and Madrasi flavours has its doors open for you.</p>
               <div class="slide-btns fade-up" style="--l:3"><a href="/menu.html" class="btn btn-gold" data-link>Explore the Menu</a><a href="/contact.html#reserve" class="btn btn-ghost-light" data-link>Reserve a Table</a></div>
             </div></div></div>
           </article>
           <article class="slide" data-label="Kitchen">
             <div class="slide-media" data-img="chefFlame"></div>
             <div class="slide-content"><div class="container"><div class="slide-text">
-              <span class="slide-kicker fade-up" style="--l:0"><span class="indic">அடுப்பங்கரை</span> The kitchen, awake since dawn</span>
-              <h2 class="slide-title"><span class="line" style="--l:0"><span>Fire, cast iron</span></span><span class="line" style="--l:1"><span>&amp; <em>patience</em></span></span></h2>
-              <p class="slide-desc fade-up" style="--l:2">Batters are stone-ground every evening and left to rise overnight. Spice powders are roasted in small batches. Nothing here is rushed, because good food never is.</p>
+              <span class="slide-kicker fade-up" style="--l:0"><span class="indic">அடுப்பங்கரை</span> The kitchen, busy since morning</span>
+              <h2 class="slide-title"><span class="line" style="--l:0"><span>Fire, handis</span></span><span class="line" style="--l:1"><span>&amp; <em>patience</em></span></span></h2>
+              <p class="slide-desc fade-up" style="--l:2">Meat is marinated for hours, masalas are roasted in small batches and every biryani is cooked slowly with its rice. Nothing here is rushed, because good food never is.</p>
               <div class="slide-btns fade-up" style="--l:3"><a href="/about.html" class="btn btn-gold" data-link>Our Story</a></div>
             </div></div></div>
           </article>
@@ -43,30 +49,36 @@
             <div class="slide-content"><div class="container"><div class="slide-text">
               <span class="slide-kicker fade-up" style="--l:0"><span class="indic">சாப்பாடு</span> Saapadu · the full meal</span>
               <h2 class="slide-title"><span class="line" style="--l:0"><span>Lunch, served the</span></span><span class="line" style="--l:1"><span><em>banana leaf</em> way</span></span></h2>
-              <p class="slide-desc fade-up" style="--l:2">Rice, sambar, rasam, kootu, poriyal, appalam and payasam — course after course on a fresh leaf, refilled with a smile until you fold it closed.</p>
-              <div class="slide-btns fade-up" style="--l:3"><a href="/menu.html#meals" class="btn btn-gold" data-link>See Today’s Meals</a></div>
+              <p class="slide-desc fade-up" style="--l:2">Bagara rice, curries, fries, curd and something sweet — our thalis and combos are served on a fresh banana leaf, the way a proper meal should be.</p>
+              <div class="slide-btns fade-up" style="--l:3"><a href="/menu.html#thali" class="btn btn-gold" data-link>See Our Thalis</a></div>
             </div></div></div>
           </article>
-          <article class="slide" data-label="Dosa">
-            <div class="slide-media" data-img="masalaDosa"></div>
+          <article class="slide" data-label="Biryani">
+            <div class="slide-media" data-img="biryani"></div>
             <div class="slide-content"><div class="container"><div class="slide-text">
-              <span class="slide-kicker fade-up" style="--l:0"><span class="indic">தோசை</span> Straight off the tawa</span>
-              <h2 class="slide-title"><span class="line" style="--l:0"><span>Golden, crisp &amp;</span></span><span class="line" style="--l:1"><span><em>ghee-kissed</em> dosas</span></span></h2>
-              <p class="slide-desc fade-up" style="--l:2">Paper-thin roasts, spongy set dosas, fiery Mysore masala and soft uttapams — each with three fresh chutneys and a bowl of steaming sambar.</p>
-              <div class="slide-btns fade-up" style="--l:3"><a href="/menu.html#dosa" class="btn btn-gold" data-link>Dosa Menu</a></div>
+              <span class="slide-kicker fade-up" style="--l:0"><span class="indic">பிரியாணி</span> Desi &amp; Madrasi biryani</span>
+              <h2 class="slide-title"><span class="line" style="--l:0"><span>Bagara, dum &amp;</span></span><span class="line" style="--l:1"><span><em>Madrasi</em> biryani</span></span></h2>
+              <p class="slide-desc fade-up" style="--l:2">Fragrant bagara rice, Hyderabadi chicken dum biryani and our Madras-style chicken, mutton and veg biryanis — with combos made for sharing.</p>
+              <div class="slide-btns fade-up" style="--l:3"><a href="/menu.html#madrasi-biryani" class="btn btn-gold" data-link>Biryani Menu</a></div>
             </div></div></div>
           </article>
-          <article class="slide" data-label="Kaapi">
-            <div class="slide-media" data-img="filterCoffee"></div>
+          <article class="slide" data-label="Sukka">
+            <div class="slide-media" data-img="chettinadCurry"></div>
             <div class="slide-content"><div class="container"><div class="slide-text">
-              <span class="slide-kicker fade-up" style="--l:0"><span class="indic">காபி</span> Degree kaapi</span>
-              <h2 class="slide-title"><span class="line" style="--l:0"><span>Finish with a</span></span><span class="line" style="--l:1"><span>tumbler of <em>filter kaapi</em></span></span></h2>
-              <p class="slide-desc fade-up" style="--l:2">Thick decoction, boiling milk and a long, theatrical pour between tumbler and dabarah — the only proper way to end a South Indian meal.</p>
-              <div class="slide-btns fade-up" style="--l:3"><a href="/contact.html" class="btn btn-gold" data-link>Visit Us Today</a></div>
+              <span class="slide-kicker fade-up" style="--l:0"><span class="indic">சுக்கா</span> The must-try</span>
+              <h2 class="slide-title"><span class="line" style="--l:0"><span>Don’t leave without</span></span><span class="line" style="--l:1"><span>our <em>mutton sukka</em></span></span></h2>
+              <p class="slide-desc fade-up" style="--l:2">Mutton or chicken, roasted dry with shallots, pepper and coconut until every piece is coated — the dish our regulars order every single time.</p>
+              <div class="slide-btns fade-up" style="--l:3"><a href="/menu.html#curries" class="btn btn-gold" data-link>Curries &amp; Fries</a></div>
             </div></div></div>
           </article>
         </div>
         <div class="hero-frame" aria-hidden="true"></div>
+        <div class="hero-photos" aria-label="Real photos from Desi Madrasi">
+          <span class="hp-label">Real plates · from our kitchen</span>
+          <figure class="polaroid hp1"><img src="/images/real/combo-tray.png" alt="Khichdi and bagara combo tray at Desi Madrasi" /></figure>
+          <figure class="polaroid hp2"><img src="/images/real/bagara-leaf.png" alt="Bagara rice and chicken fry on a banana leaf" /></figure>
+          <figure class="polaroid hp3"><img src="/images/real/biryani-leaf.png" alt="Mutton and Madrasi biryani served on a banana leaf" /></figure>
+        </div>
         <div class="hero-scroll" aria-hidden="true">Scroll to enter</div>
         <div class="hero-ui">
           <div class="container">
@@ -85,8 +97,8 @@
         <div class="container welcome-grid">
           <div class="collage">
             <div class="c-kolam" data-kolam="draw-on-view"></div>
-            <figure class="c1" data-reveal="arch"><img data-img="idliLeaf" alt="Soft idlis served on a banana leaf with chutney" loading="lazy" /></figure>
-            <figure class="c2" data-reveal="mask" style="--delay:250ms"><img data-img="dosaLeaf" alt="Crisp dosa with sambar and coconut chutney" loading="lazy" /></figure>
+            <figure class="c1" data-reveal="arch"><img data-img="biryani" alt="A handi of chicken biryani" loading="lazy" /></figure>
+            <figure class="c2" data-reveal="mask" style="--delay:250ms"><img data-img="realBiryaniLeaf" alt="Biryani served on a banana leaf at Desi Madrasi" loading="lazy" /></figure>
             <div class="c-badge" data-reveal="zoom" style="--delay:500ms">
               <svg class="ring" viewBox="0 0 132 132" aria-hidden="true"><defs><path id="circ" d="M66,66 m-54,0 a54,54 0 1,1 108,0 a54,54 0 1,1 -108,0"/></defs><text><textPath href="#circ">Tradition meets the taste · Tradition meets the taste ·</textPath></text></svg>
               <span class="badge-diya"></span>
@@ -94,19 +106,19 @@
           </div>
           <div>
             <span class="eyebrow left" data-reveal="up">Vanakkam, Hyderabad</span>
-            <h2 class="title" data-reveal="up">A little piece of <em>Madras</em>, right here in Kondapur</h2>
-            <p class="lead" data-reveal="up">Desi Madrasi began with a simple wish — that anyone in Hyderabad craving the food of a Tamil home should not have to wait for their next trip down south. So we brought the grinding stone, the cast-iron tawa, the brass tumblers and the recipes that taste like somebody’s amma made them.</p>
-            <p data-reveal="up">From the first idli of the morning to the last ghee roast of the night, everything on your plate is made the slow way: batter fermented overnight, sambar powder roasted and pounded in our own kitchen, coconut freshly grated, and coffee brewed by the slow drip of a traditional filter.</p>
+            <h2 class="title" data-reveal="up">Where <em>Desi</em> meets <em>Madrasi</em>, right here in Kondapur</h2>
+            <p class="lead" data-reveal="up">Desi Madrasi began with a simple idea — bring Hyderabad’s favourite bagara and dum biryani to the same table as the Madras-style biryani and sukka of a Tamil home. Two kitchens, one family, and recipes that taste like somebody’s amma made them.</p>
+            <p data-reveal="up">From the first plate of bagara at lunch to the last combo of the night, everything is made the slow way: meat marinated for hours, masalas roasted and ground in our own kitchen, and every biryani cooked together with its rice so the flavour goes all the way through.</p>
             <div class="greeting-card" data-reveal="up">
               <div class="steam-cup"><div class="cup"><svg class="steam" viewBox="0 0 60 80" fill="none"><path d="M15 78 C 5 60, 25 50, 15 30 C 8 18, 18 8, 15 0"/><path d="M30 78 C 20 60, 40 50, 30 30 C 23 18, 33 8, 30 0"/><path d="M45 78 C 35 60, 55 50, 45 30 C 38 18, 48 8, 45 0"/></svg></div></div>
               <p data-greeting></p>
             </div>
             <ul class="signature-list" data-stagger="80">
-              <li>Stone-ground idli &amp; dosa batter</li>
-              <li>Cold-pressed gingelly &amp; coconut oil</li>
-              <li>Fresh banana leaf meals every day</li>
-              <li>Decoction brewed through the day</li>
-              <li>Chettinad masalas pounded in-house</li>
+              <li>Fragrant bagara rice, made fresh</li>
+              <li>Desi &amp; Madrasi biryani styles</li>
+              <li>Meals served on a banana leaf</li>
+              <li>Combos made for sharing</li>
+              <li>Must-try mutton &amp; chicken sukka</li>
               <li>Warm, family-friendly seating</li>
             </ul>
             <a href="/about.html" class="btn" data-link data-reveal="up">Read Our Story</a>
@@ -115,7 +127,20 @@
       </section>
 
       <!-- ===================== MARQUEE ===================== -->
-      <div class="marquee" aria-hidden="true"><div class="marquee-track" data-marquee="Ghee Podi Idli|Mysore Masala Dosa|Sambar Vada|Chettinad Pepper Chicken|Kuzhi Paniyaram|Bisi Bele Bath|Ven Pongal|Rava Kesari|Filter Kaapi|Banana Leaf Meals"></div></div>
+      <div class="marquee" aria-hidden="true"><div class="marquee-track" data-marquee="Mutton Fry + Bagara|Madrasi Chicken Biryani|Chicken Dum Biryani|Mutton Sukka|Chicken Sukka|Kaju Chicken Pakoda|Desi Madrasi Combo|Non Veg Thali|Kaddu Ka Kheer|Banana Leaf Meals"></div></div>
+
+      <!-- ===================== REAL PLATES ===================== -->
+      <section class="section texture real-plates">
+        <div class="container">
+          <div class="section-head center">
+            <span class="eyebrow" data-reveal="up">Real Plates, Real Kitchen</span>
+            <h2 class="title" data-reveal="up">Straight from <em>our tables</em></h2>
+            <p class="lead" data-reveal="up">No stock photos here — these are plates served at Desi Madrasi, shared by our guests. Bagara, biryani and khichdi in clay pots, on a fresh banana leaf.</p>
+          </div>
+          <div class="rp-grid" data-stagger="120"></div>
+          <div class="center" style="margin-top: 40px" data-reveal="up"><a href="/gallery.html" class="btn" data-link>See the Gallery</a></div>
+        </div>
+      </section>
 
       <!-- ===================== SIGNATURE COVERFLOW ===================== -->
       <section class="section section-night texture" id="signatures">
@@ -138,34 +163,34 @@
       <section class="section" id="day">
         <div class="container">
           <div class="section-head center">
-            <span class="eyebrow" data-reveal="up">From Sunrise to Starlight</span>
+            <span class="eyebrow" data-reveal="up">From Lunch to Late Night</span>
             <h2 class="title" data-reveal="up">A day at <em>Desi Madrasi</em></h2>
-            <p class="lead" data-reveal="up">A South Indian kitchen keeps its own clock. Our menu changes with the hours, exactly the way it would in a home in Mylapore or Madurai.</p>
+            <p class="lead" data-reveal="up">Whether it is a quick lunch, an evening bite or a big family dinner, there is a plate on our menu made for that moment.</p>
           </div>
           <div class="day-grid" data-stagger="140">
             <div class="day-card">
-              <div class="day-sun"><span><b>7</b>AM</span></div>
-              <figure><img data-img="idliVada" alt="Idli, vada and chutneys for breakfast" loading="lazy" /></figure>
-              <h3>Morning Tiffin</h3>
-              <p>Pillowy idlis, crunchy medu vadas, ven pongal with black pepper and ghee, and the first dosas off the tawa.</p>
-            </div>
-            <div class="day-card">
               <div class="day-sun"><span><b>12</b>PM</span></div>
-              <figure><img data-img="thali" alt="Traditional South Indian meals plate" loading="lazy" /></figure>
-              <h3>Leaf Meals</h3>
-              <p>Unlimited rice with sambar, rasam, kootu, poriyal, appalam, curd and the sweet of the day.</p>
+              <figure><img data-img="leafPulao" alt="Bagara rice with curry" loading="lazy" /></figure>
+              <h3>Bagara Lunch</h3>
+              <p>Fragrant bagara rice with chicken curry, chicken fry, mutton or veg curry — a quick, filling lunch plate.</p>
             </div>
             <div class="day-card">
-              <div class="day-sun"><span><b>4</b>PM</span></div>
-              <figure><img data-img="paniyaram" alt="Golden kuzhi paniyaram" loading="lazy" /></figure>
-              <h3>Kaapi &amp; Tiffin</h3>
-              <p>Kuzhi paniyaram, mirchi bajji, onion pakoda and a tumbler of frothy filter coffee for the evening pause.</p>
+              <div class="day-sun"><span><b>2</b>PM</span></div>
+              <figure><img data-img="thali" alt="Veg and non-veg thali" loading="lazy" /></figure>
+              <h3>Thali Time</h3>
+              <p>Veg and non-veg thalis with rice, curries, dal, curd and a sweet — a complete meal, served on a banana leaf.</p>
+            </div>
+            <div class="day-card">
+              <div class="day-sun"><span><b>5</b>PM</span></div>
+              <figure><img data-img="kebab" alt="Crispy chicken starters" loading="lazy" /></figure>
+              <h3>Evening Bites</h3>
+              <p>Kaju chicken pakoda, chicken 65, chicken sukka and a chilled cool drink for the evening hunger.</p>
             </div>
             <div class="day-card">
               <div class="day-sun"><span><b>7</b>PM</span></div>
-              <figure><img data-img="dosaSambar" alt="Ghee roast dosa with sambar for dinner" loading="lazy" /></figure>
+              <figure><img data-img="biryani" alt="Chicken dum biryani for dinner" loading="lazy" /></figure>
               <h3>Dinner Feast</h3>
-              <p>Ghee roasts, parottas with Chettinad curries, Dindigul-style biryani and comforting curd rice to close.</p>
+              <p>Desi and Madrasi biryanis, combos for the whole table, mutton sukka and comforting curd rice to close.</p>
             </div>
           </div>
         </div>
@@ -174,9 +199,9 @@
       <!-- ===================== STATS ===================== -->
       <section class="section section-dark texture" style="padding: 80px 0">
         <div class="container stats" data-stagger="120">
-          <div class="stat"><span class="stat-num" data-count="70" data-suffix="+">0</span><span class="stat-label">Dishes on the menu</span></div>
-          <div class="stat"><span class="stat-num" data-count="12" data-suffix=" hrs">0</span><span class="stat-label">Batter fermentation</span></div>
-          <div class="stat"><span class="stat-num" data-count="4">0</span><span class="stat-label">Southern states, one menu</span></div>
+          <div class="stat"><span class="stat-num" data-count="50" data-suffix="+">0</span><span class="stat-label">Dishes on the menu</span></div>
+          <div class="stat"><span class="stat-num" data-count="7">0</span><span class="stat-label">Combo meals for sharing</span></div>
+          <div class="stat"><span class="stat-num" data-count="2">0</span><span class="stat-label">Biryani styles, one kitchen</span></div>
           <div class="stat"><span class="stat-num" data-count="100" data-suffix="%">0</span><span class="stat-label">Fresh leaves, every lunch</span></div>
         </div>
       </section>
@@ -190,17 +215,17 @@
           </div>
           <div>
             <span class="eyebrow left light" data-reveal="up">The Art of Saapadu</span>
-            <h2 class="title" data-reveal="up">How a banana leaf meal <em>unfolds</em></h2>
-            <p class="lead" data-reveal="up">There is an order and a reason to everything on the leaf. Here is what to expect when you sit down for lunch.</p>
+            <h2 class="title" data-reveal="up">How a Desi Madrasi meal <em>unfolds</em> on the leaf</h2>
+            <p class="lead" data-reveal="up">Order a combo and here is how it comes to you — bagara and biryani side by side on a fresh banana leaf.</p>
             <ol class="leaf-steps" data-stagger="110">
-              <li><div><b>Salt, pickle &amp; a little sweet</b><span>Placed first on the upper-left corner of the leaf, exactly as tradition asks.</span></div></li>
-              <li><div><b>Poriyal &amp; kootu</b><span>A dry stir-fry of seasonal vegetables and a gentle lentil-coconut stew along the top edge.</span></div></li>
-              <li><div><b>Appalam &amp; vadai</b><span>Crackling papad and a crisp vada — the crunch every good meal needs.</span></div></li>
-              <li><div><b>Rice, paruppu &amp; ghee</b><span>The first round of steaming rice with soft dal and a generous spoon of ghee.</span></div></li>
-              <li><div><b>Sambar, then rasam</b><span>Thick tamarind-lentil sambar, followed by peppery rasam that warms and settles.</span></div></li>
-              <li><div><b>Curd rice &amp; payasam</b><span>The cooling finish, followed by a ladle of payasam and a ripe banana.</span></div></li>
+              <li><div><b>Bagara rice</b><span>Rice tempered with whole spices, mint and fried onions — the Hyderabadi base of the meal.</span></div></li>
+              <li><div><b>Madrasi biryani</b><span>Our Madras-style biryani, rich with tomato, mint and green chilli.</span></div></li>
+              <li><div><b>Chicken curry</b><span>A home-style onion-tomato curry to pour over the bagara.</span></div></li>
+              <li><div><b>Chicken fry</b><span>Dry-roasted with curry leaves and green chilli — the crunch every good meal needs.</span></div></li>
+              <li><div><b>Raita &amp; salan</b><span>Cooling onion raita and tangy salan on the side.</span></div></li>
+              <li><div><b>Something sweet</b><span>Close with kaddu ka kheer or ksheera.</span></div></li>
             </ol>
-            <a href="/menu.html#meals" class="btn btn-gold" data-link data-reveal="up">View Meals Menu</a>
+            <a href="/menu.html#combos" class="btn btn-gold" data-link data-reveal="up">View All Combos</a>
           </div>
         </div>
       </section>
@@ -215,51 +240,51 @@
           <div class="exp-grid" data-stagger="140" data-reveal-type="zoom">
             <a class="exp-card" href="/services.html#dine-in" data-link>
               <img data-img="interiorHall" alt="Warm dining hall" loading="lazy" />
-              <div class="exp-body"><span class="num">01</span><h3>Family Dine-In</h3><p>Warm lights, roomy tables and unhurried service — bring the grandparents, bring the little ones, stay for a second kaapi.</p><span class="link-arrow">Discover <svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></span></div>
+              <div class="exp-body"><span class="num">01</span><h3>Family Dine-In</h3><p>Warm lights, roomy tables and unhurried service — bring the grandparents, bring the little ones, stay for a second helping.</p><span class="link-arrow">Discover <svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></span></div>
             </a>
             <a class="exp-card" href="/services.html#catering" data-link>
               <img data-img="tableSpread" alt="Spread of dishes for an event" loading="lazy" />
-              <div class="exp-body"><span class="num">02</span><h3>Catering &amp; Events</h3><p>Housewarmings, poojas, birthdays and office celebrations — authentic leaf meals and tiffin served wherever you gather.</p><span class="link-arrow">Plan an event <svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></span></div>
+              <div class="exp-body"><span class="num">02</span><h3>Catering &amp; Events</h3><p>Housewarmings, birthdays, get-togethers and office celebrations — biryani, bagara and curries served wherever you gather.</p><span class="link-arrow">Plan an event <svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></span></div>
             </a>
             <a class="exp-card" href="/services.html#takeaway" data-link>
               <img data-img="riceBowl" alt="Packed meal ready for takeaway" loading="lazy" />
-              <div class="exp-body"><span class="num">03</span><h3>Takeaway &amp; Office Lunch</h3><p>Leak-proof packing that keeps dosas crisp and sambar hot, plus daily lunch boxes for teams around HITEC City and Kondapur.</p><span class="link-arrow">Order now <svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></span></div>
+              <div class="exp-body"><span class="num">03</span><h3>Takeaway &amp; Office Lunch</h3><p>Sealed packing that keeps biryani hot and curries spill-free, plus lunch boxes for teams around HITEC City and Kondapur.</p><span class="link-arrow">Order now <svg viewBox="0 0 24 24"><path d="M13.2 5.3 19.9 12l-6.7 6.7-1.4-1.4 4.3-4.3H4v-2h12.1l-4.3-4.3z"/></svg></span></div>
             </a>
           </div>
         </div>
       </section>
 
-      <div class="marquee alt" aria-hidden="true"><div class="marquee-track" data-marquee="Vanakkam|Namaskaram|Swagatham|Welcome Home|Saapadu Ready|Kaapi Time"></div></div>
+      <div class="marquee alt" aria-hidden="true"><div class="marquee-track" data-marquee="Vanakkam|Namaskaram|Swagatham|Welcome Home|Saapadu Ready|Biryani Time"></div></div>
 
       <!-- ===================== OUR PROMISE ===================== -->
       <section class="section section-sandal texture">
         <div class="container promise">
           <div class="promise-visual" data-reveal="zoom">
             <div class="pv-kolam" data-kolam="draw-on-view slow-spin"></div>
-            <div class="pv-img"><img data-img="idliLeaf" alt="" loading="lazy" /></div>
+            <div class="pv-img"><img data-img="biryani" alt="" loading="lazy" /></div>
           </div>
           <div>
             <span class="eyebrow left" data-reveal="up">Our Five Promises</span>
             <h2 class="title" data-reveal="up">What we will <em>never</em> compromise on</h2>
             <div class="promise-slider" data-reveal="up">
-              <div class="promise-item active" data-img="idliLeaf">
+              <div class="promise-item active" data-img="leafPulao">
                 <span class="quote-mark">“</span>
-                <h3>Batter ground fresh, every single evening.</h3>
-                <p>Urad dal and rice are soaked, stone-ground and left to ferment naturally overnight. No ready-mix, no shortcuts, no soda — just the gentle sourness and softness that only time can give an idli.</p>
+                <h3>Bagara rice made fresh for every service.</h3>
+                <p>Whole spices, mint and golden fried onions tempered into the rice in small batches through the day. No reheated rice, no shortcuts — just the aroma that makes bagara worth coming back for.</p>
               </div>
               <div class="promise-item" data-img="spiceThali">
                 <span class="quote-mark">“</span>
                 <h3>Spices roasted and pounded in our own kitchen.</h3>
-                <p>Sambar podi, rasam podi, gunpowder and Chettinad masala are dry-roasted in small batches and ground in-house, so every curry carries the aroma of spices that were whole only days ago.</p>
+                <p>Biryani masala, sukka masala and curry powders are dry-roasted in small batches and ground in-house, so every dish carries the aroma of spices that were whole only days ago.</p>
               </div>
-              <div class="promise-item" data-img="filterCoffee">
+              <div class="promise-item" data-img="biryani">
                 <span class="quote-mark">“</span>
-                <h3>Coffee the slow way, never from a machine.</h3>
-                <p>Our blend of coffee and chicory drips through traditional brass filters, fresh through the day. It is mixed with boiling milk and poured high to raise that famous froth.</p>
+                <h3>Biryani cooked slowly, never rushed.</h3>
+                <p>Meat is marinated for hours, then cooked together with the rice so every grain soaks up the masala. It takes longer, and you can taste the difference.</p>
               </div>
               <div class="promise-item" data-img="bananaLeafMeal">
                 <span class="quote-mark">“</span>
-                <h3>A fresh banana leaf for every guest at lunch.</h3>
+                <h3>A fresh banana leaf for every guest.</h3>
                 <p>Leaves arrive every morning, are washed and trimmed by hand, and laid out just before you sit. It is greener, it is traditional, and the food simply tastes better on it.</p>
               </div>
               <div class="promise-item" data-img="interiorWarm">
@@ -298,7 +323,7 @@
               <ul>
                 <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span><div><b>Address</b><span>Pillar No. 38, 1st Floor, above Ramraj Cotton, near Bajaj Electronics, Kondapur, Hyderabad</span></div></li>
                 <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></span><div><b>Call or WhatsApp</b><a data-tel data-phone-text></a></div></li>
-                <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2z"/></svg></span><div><b>Open Daily</b><span>7:00 AM – 11:00 PM · Tiffin, Meals, Snacks &amp; Dinner</span></div></li>
+                <li><span class="ic"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.4 3.5 2.1-.8 1.3L11 13V7h2z"/></svg></span><div><b>Open Daily</b><span>12:00 PM – 11:00 PM · Lunch, Evening Bites &amp; Dinner</span></div></li>
               </ul>
               <a data-map target="_blank" rel="noopener" class="btn">Get Directions</a>
             </div>

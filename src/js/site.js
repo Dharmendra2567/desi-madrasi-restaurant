@@ -20,12 +20,11 @@ export const SITE = {
     'Pillar No 38, Kondapur, Gachibowli - Miyapur Rd, above Ramraj Cotton, near Bajaj Electronics, Hyderabad',
   // Opening hours (24h). Update to match the real timings.
   hours: [
-    { label: 'Morning Tiffin', time: '7:00 AM – 11:30 AM' },
-    { label: 'Lunch & Meals', time: '12:00 PM – 3:30 PM' },
-    { label: 'Evening Snacks & Kaapi', time: '4:00 PM – 6:30 PM' },
+    { label: 'Lunch', time: '12:00 PM – 4:00 PM' },
+    { label: 'Evening Bites', time: '4:00 PM – 7:00 PM' },
     { label: 'Dinner', time: '7:00 PM – 11:00 PM' },
   ],
-  openHour: 7,
+  openHour: 12,
   closeHour: 23,
   socials: {
     instagram: '#',
@@ -48,7 +47,20 @@ export const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(SIT
 const u = (id, w = 1600) =>
   `https://images.unsplash.com/photo-${id}?w=${w}&q=75&auto=format&fit=crop`
 
+// Real photos of Desi Madrasi (from the Google Maps listing). Low resolution (152×202),
+// so they are shown in small framed cards rather than full-screen backgrounds.
+export const REAL = [
+  { key: 'realBiryaniLeaf', src: '/images/real/biryani-leaf.png', cap: 'Mutton & Madrasi biryani on a banana leaf' },
+  { key: 'realBagaraLeaf', src: '/images/real/bagara-leaf.png', cap: 'Bagara rice & chicken fry on a banana leaf' },
+  { key: 'realComboTray', src: '/images/real/combo-tray.png', cap: 'Khichdi & bagara combo with salan and raita' },
+  { key: 'realPots', src: '/images/real/pots-khichdi-bagara.png', cap: 'Khichdi, bagara & curries in clay pots' },
+]
+
 export const IMG = {
+  realBiryaniLeaf: '/images/real/biryani-leaf.png',
+  realBagaraLeaf: '/images/real/bagara-leaf.png',
+  realComboTray: '/images/real/combo-tray.png',
+  realPots: '/images/real/pots-khichdi-bagara.png',
   interiorWarm: u('1590846406792-0adc7f938f1d'),
   interiorHall: u('1552566626-52f8b828add9'),
   interiorDining: u('1414235077428-338989a2e8c0'),

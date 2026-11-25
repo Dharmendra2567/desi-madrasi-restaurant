@@ -1,4 +1,3 @@
-import '../../styles/main.css'
 import { initSite } from '../layout.js'
 import { MENU } from '../menu-data.js'
 import { IMG } from '../site.js'

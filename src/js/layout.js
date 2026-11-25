@@ -1,10 +1,10 @@
-import { SITE, IMG, telLink, mailLink, waLink, mapLink, mapEmbed } from './site.js'
+import { SITE, IMG, REAL, telLink, mailLink, waLink, mapLink, mapEmbed } from './site.js'
 import { kolamSVG, diyaSVG, emblemSVG, icon } from './ornaments.js'
 
 const NAV = [
   { id: 'home', href: '/', label: 'Home', sub: 'Vanakkam' },
   { id: 'about', href: '/about.html', label: 'About Us', sub: 'Our story' },
-  { id: 'menu', href: '/menu.html', label: 'Menu', sub: 'Leaf & tawa' },
+  { id: 'menu', href: '/menu.html', label: 'Menu', sub: 'Bagara & biryani' },
   { id: 'services', href: '/services.html', label: 'Services', sub: 'Catering & events' },
   { id: 'gallery', href: '/gallery.html', label: 'Gallery', sub: 'Moments' },
   { id: 'contact', href: '/contact.html', label: 'Contact', sub: 'Find us' },
@@ -15,10 +15,13 @@ const finePointer = window.matchMedia('(pointer: fine)').matches
 
 /* ---------------- Logo: uses /logo.png, falls back to emblem ---------------- */
 const logoHTML = () => `
+  <span class="brand-mark">
   <span class="brand-logo">
     <img src="/desi-madrasi-restaurant-logo.jpeg" alt="${SITE.fullName} logo" width="56" height="56"
       onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'emblem-wrap',innerHTML:this.dataset.fallback}))"
       data-fallback='${emblemSVG.replace(/'/g, '&#39;')}'>
+  </span>
+  <sup class="tm" aria-label="Trademark">TM</sup>
   </span>`
 
 /* ---------------- Open / closed status ---------------- */
@@ -27,16 +30,16 @@ function status() {
   const open = h >= SITE.openHour && h < SITE.closeHour
   return open
     ? `<span class="status open"><i></i>Open now · until 11 PM</span>`
-    : `<span class="status closed"><i></i>Closed now · opens 7 AM</span>`
+    : `<span class="status closed"><i></i>Closed now · opens 12 PM</span>`
 }
 
 export function timeGreeting() {
   const h = new Date().getHours()
-  if (h >= 5 && h < 11) return { hello: 'Good morning', line: 'The idlis are steaming and the decoction is dripping slowly — breakfast is ready when you are.' }
-  if (h >= 11 && h < 16) return { hello: 'Good afternoon', line: 'Banana leaves are being laid out and the sambar has just been tempered. Lunch is calling.' }
-  if (h >= 16 && h < 19) return { hello: 'Good evening', line: 'Hot bajjis, crisp medu vadas and a frothy tumbler of filter kaapi — the evening ritual begins.' }
-  if (h >= 19 && h < 23) return { hello: 'Good evening', line: 'The tawas are roaring and ghee roasts are rolling out for dinner. Come hungry.' }
-  return { hello: 'Good night', line: 'The kitchen is resting while tomorrow’s batter ferments. We open at 7 AM with fresh tiffin.' }
+  if (h >= 5 && h < 12) return { hello: 'Good morning', line: 'The masalas are roasting and the meat is marinating — lunch will be ready from 12 PM.' }
+  if (h >= 12 && h < 16) return { hello: 'Good afternoon', line: 'Banana leaves are being laid out and the bagara rice is fresh off the stove. Lunch is calling.' }
+  if (h >= 16 && h < 19) return { hello: 'Good evening', line: 'Kaju chicken pakoda, chicken sukka and a chilled cool drink — the evening hunger is sorted.' }
+  if (h >= 19 && h < 23) return { hello: 'Good evening', line: 'The biryani handis are being opened for dinner. Come hungry.' }
+  return { hello: 'Good night', line: 'The kitchen is resting for the night. We open at 12 PM with fresh bagara and biryani.' }
 }
 
 /* ---------------- Header ---------------- */
@@ -138,7 +141,7 @@ function renderFooter() {
     <div class="container footer-grid">
       <div class="f-col f-brand">
         <a href="/" class="brand brand-light" data-link>${logoHTML()}<span class="brand-text"><b>Desi Madrasi</b><small>Restaurant · Kondapur</small></span></a>
-        <p>Stone-ground batters, slow-roasted spice powders and coffee brewed the patient way — the honest flavours of a Madras home kitchen, served on the Gachibowli – Miyapur Road.</p>
+        <p>Fragrant bagara, slow-cooked biryani and spice powders roasted in-house — the honest flavours of Desi and Madrasi home kitchens, served on a banana leaf on the Gachibowli – Miyapur Road.</p>
         <div class="socials">
           <a href="${SITE.socials.instagram}" aria-label="Instagram">${icon.instagram}</a>
           <a href="${SITE.socials.facebook}" aria-label="Facebook">${icon.facebook}</a>
@@ -376,7 +379,7 @@ export function flowerShower({ count = 90, duration = 5200, container = document
 /* ---------------- Temple-door entrance (home, once per session) ---------------- */
 export function entrance(onOpen) {
   const seen = sessionStorage.getItem('dm-entered') === '1'
-  if (seen) { onOpen?.(false); return }
+  if (seen) { document.documentElement.classList.remove('pre-enter'); onOpen?.(false); return }
   sessionStorage.setItem('dm-entered', '1')
 
   const greetings = [
@@ -396,11 +399,13 @@ export function entrance(onOpen) {
       ${kolamSVG('entrance-kolam')}
       <div class="entrance-diya">${diyaSVG()}</div>
       <img class="entrance-logo" src="/desi-madrasi-restaurant-logo.jpeg" alt="">
+      <sup class="tm entrance-tm" aria-hidden="true">TM</sup>
       <div class="greet">${greetings.map((g, i) => `<div class="greet-item" style="--i:${i}"><span class="gw">${g.word}</span><span class="gt">${g.tr}</span></div>`).join('')}</div>
     </div>
     <button class="entrance-skip">Skip ›</button>`
   document.body.appendChild(pre)
   document.body.classList.add('is-entering')
+  document.documentElement.classList.remove('pre-enter')
 
   let done = false
   const open = () => {
@@ -409,11 +414,11 @@ export function entrance(onOpen) {
     pre.classList.add('open')
     document.body.classList.remove('is-entering')
     onOpen?.(true)
-    setTimeout(() => pre.remove(), 1900)
+    setTimeout(() => pre.remove(), 1500)
   }
   pre.querySelector('.entrance-skip').addEventListener('click', open)
   setTimeout(() => pre.classList.add('play'), 30)
-  setTimeout(open, 4900)
+  setTimeout(open, 3200)
 }
 
 /* ---------------- Inner page hero helper ---------------- */
@@ -421,6 +426,10 @@ function pageHero() {
   const hero = document.querySelector('.page-hero')
   if (!hero) return
   hero.querySelector('.ph-kolam')?.insertAdjacentHTML('beforeend', kolamSVG('drawn slow-spin'))
+  // Framed real photo of the restaurant's food on every inner-page banner
+  const pick = { about: 'realPots', menu: 'realBiryaniLeaf', services: 'realComboTray', gallery: 'realBagaraLeaf', contact: 'realBiryaniLeaf' }
+  const real = REAL.find((r) => r.key === pick[document.body.dataset.page]) || REAL[0]
+  hero.insertAdjacentHTML('beforeend', `<figure class="polaroid ph-photo"><img src="${real.src}" alt="${real.cap}" /><figcaption>Real plate · Desi Madrasi</figcaption></figure>`)
   setTimeout(() => hero.classList.add('in'), 60)
 }
 

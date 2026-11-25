@@ -197,7 +197,7 @@ export function coverflow(root, items, { dotsEl, prevBtn, nextBtn, interval = 42
    ========================================================= */
 export function promiseSlider(root, { navEl, imgEl, imgMap, interval = 6000 } = {}) {
   const items = [...root.querySelectorAll('.promise-item')]
-  const labels = ['Batter', 'Spices', 'Kaapi', 'Leaf', 'Welcome']
+  const labels = ['Bagara', 'Spices', 'Biryani', 'Leaf', 'Welcome']
   navEl.innerHTML = items.map((_, i) => `<button role="tab">${labels[i] || i + 1}</button>`).join('')
   const btns = [...navEl.children]
   let idx = 0

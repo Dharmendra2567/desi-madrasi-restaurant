@@ -1,40 +1,38 @@
-import '../../styles/main.css'
 import { initSite } from '../layout.js'
-import { IMG, SITE } from '../site.js'
+import { IMG, SITE, REAL } from '../site.js'
 
 const PHOTOS = [
-  ['masalaDosa', 'food', 'Ghee roast masala dosa'],
+  ...REAL.map((r) => [r.key, 'real', r.cap]),
+  ['biryani', 'food', 'Chicken dum biryani'],
   ['interiorWarm', 'ambience', 'Evening glow in the main hall'],
-  ['idliLeaf', 'food', 'Idlis on a fresh banana leaf'],
-  ['chefFlame', 'kitchen', 'Fire on the tawa'],
+  ['leafPulao', 'food', 'Fragrant bagara rice'],
+  ['chefFlame', 'kitchen', 'Fire under the handi'],
   ['bananaLeafMeal', 'food', 'The full leaf meal'],
   ['friendsDining', 'moments', 'Sunday lunch with friends'],
-  ['filterCoffee', 'food', 'Two tumblers of filter kaapi'],
-  ['chettinadCurry', 'food', 'Chettinad curry'],
+  ['tomatoRice', 'food', 'Madrasi biryani'],
+  ['chettinadCurry', 'food', 'Mutton sukka'],
   ['candleDining', 'ambience', 'A quiet dinner'],
-  ['paniyaram', 'food', 'Kuzhi paniyaram'],
+  ['kebab', 'food', 'Kaju chicken pakoda'],
   ['spiceThali', 'kitchen', 'House-roasted spice powders'],
-  ['dosaLeaf', 'food', 'Dosa, sambar & chutney'],
+  ['chickenCurry', 'food', 'Home-style chicken curry'],
   ['crowd', 'moments', 'A full house'],
-  ['idliVada', 'food', 'Idli vada with chutneys'],
+  ['redCurry', 'food', 'Mutton curry'],
   ['kitchenBar', 'kitchen', 'Behind the counter'],
-  ['biryani', 'food', 'Dindigul-style biryani'],
+  ['riceBowl', 'food', 'Biryani, plated and ready'],
   ['interiorDining', 'ambience', 'Set for the evening'],
   ['tableSpread', 'moments', 'A table for celebrations'],
-  ['uttapam', 'food', 'Loaded uttapam'],
-  ['fishCurry', 'food', 'Coastal fish curry'],
+  ['paneer', 'food', 'Veg specials'],
   ['friendsTable', 'moments', 'Plates shared, stories told'],
-  ['plainDosa', 'food', 'Crisp plain dosa'],
   ['interiorHall', 'ambience', 'The dining room'],
-  ['thali', 'food', 'Meals plate'],
+  ['thali', 'food', 'Non veg thali'],
 ]
 
 const grid = document.querySelector('.masonry')
 grid.innerHTML = PHOTOS.map(
   ([key, cat, cap], i) => `
-  <figure class="g-item" data-cat="${cat}" data-i="${i}" data-reveal="up" style="--delay:${(i % 3) * 90}ms" tabindex="0">
+  <figure class="g-item${cat === 'real' ? ' g-real' : ''}" data-cat="${cat}" data-i="${i}" data-reveal="up" style="--delay:${(i % 3) * 90}ms" tabindex="0">
     <img src="${IMG[key].replace('w=1600', 'w=700')}" alt="${cap}" loading="lazy">
-    <figcaption><span>${cat}</span><b>${cap}</b></figcaption>
+    <figcaption><span>${cat === 'real' ? 'Real photo' : cat}</span><b>${cap}</b></figcaption>
   </figure>`,
 ).join('')
 

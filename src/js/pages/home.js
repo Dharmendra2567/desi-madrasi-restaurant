@@ -1,7 +1,10 @@
-import '../../styles/main.css'
 import { initSite, entrance, flowerShower } from '../layout.js'
 import { heroCarousel, coverflow, promiseSlider } from '../carousel.js'
-import { IMG } from '../site.js'
+import { IMG, REAL } from '../site.js'
+
+// Real-plates strip (rendered before initSite so reveal animations pick it up)
+const rp = document.querySelector('.rp-grid')
+if (rp) rp.innerHTML = REAL.map((r, i) => `<figure class="polaroid rp-card" style="--r:${[-4, 3, -2, 4][i % 4]}deg"><img src="${r.src}" alt="${r.cap}" loading="lazy" /><figcaption>${r.cap}</figcaption></figure>`).join('')
 
 initSite('home')
 
@@ -17,13 +20,13 @@ const sig = (img, w = 800) => IMG[img].replace('w=1600', `w=${w}`)
 coverflow(
   document.querySelector('.coverflow'),
   [
-    { img: sig('masalaDosa'), tag: 'From the Tawa', name: 'Ghee Roast Masala Dosa', desc: 'A metre of golden crunch brushed with pure ghee, folded around spiced potato masala.', price: 160 },
-    { img: sig('idliVada'), tag: 'Morning Tiffin', name: 'Ghee Podi Idli', desc: 'Button idlis tossed in gunpowder and hot ghee — the snack Chennai cannot stop eating.', price: 110 },
-    { img: sig('bananaLeafMeal'), tag: 'Lunch Special', name: 'Banana Leaf Meals', desc: 'Unlimited rice with sambar, rasam, kootu, poriyal, appalam, curd and payasam.', price: 249 },
-    { img: sig('chettinadCurry'), tag: 'Chettinad Kitchen', name: 'Chettinad Pepper Chicken', desc: 'Slow-cooked with kalpasi, star anise and a fistful of freshly cracked black pepper.', price: 320 },
-    { img: sig('paniyaram'), tag: 'Evening Snack', name: 'Kuzhi Paniyaram', desc: 'Crisp-shelled, cloud-soft dumplings from a cast-iron kuzhi pan, with kara chutney.', price: 120 },
-    { img: sig('biryani'), tag: 'Dinner Favourite', name: 'Dindigul-Style Biryani', desc: 'Short-grain seeraga samba rice, tender meat and a sharp, peppery masala.', price: 299 },
-    { img: sig('filterCoffee'), tag: 'Always', name: 'Filter Kaapi', desc: 'Strong decoction, boiling milk, a high pour and a crown of froth. Served in a dabarah set.', price: 50 },
+    { img: IMG.realBiryaniLeaf, tag: 'Real Plate · Madrasi Biryani', name: 'Madrasi Chicken Biryani', desc: 'Madras-style biryani rich with tomato, mint and whole spices, with juicy chicken pieces.', price: 299 },
+    { img: IMG.realBagaraLeaf, tag: 'Real Plate · Bagara Special', name: 'Mutton Fry + Bagara', desc: 'Tender mutton roasted dry with pepper and onions, served with fragrant bagara rice.', price: 399 },
+    { img: sig('biryani'), tag: 'Desi Biryani', name: 'Chicken Dum Biryani', desc: 'Hyderabadi-style dum biryani with marinated chicken, sealed and slow-cooked.', price: 239 },
+    { img: sig('chettinadCurry'), tag: 'Must Try', name: 'Mutton Sukka', desc: 'Mutton roasted dry with shallots, pepper and coconut — our most-loved fry.', price: 399 },
+    { img: IMG.realComboTray, tag: 'Real Plate · Combo', name: 'Desi Madrasi Chicken Combo', desc: 'Bagara, Madrasi biryani, chicken curry and chicken fry — all on one table.', price: 399 },
+    { img: sig('chickenCurry'), tag: 'Must Try', name: 'Chicken Sukka', desc: 'Chicken roasted dry with shallots, pepper and coconut.', price: 299 },
+    { img: IMG.realPots, tag: 'Real Plate · Thali', name: 'Non Veg Thali', desc: 'Rice with chicken curry, chicken fry, dal, curd and a sweet — a full meal on one plate.', price: 299 },
   ],
   {
     dotsEl: document.querySelector('.cf-dots'),

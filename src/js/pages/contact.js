@@ -1,4 +1,3 @@
-import '../../styles/main.css'
 import { initSite, flowerShower } from '../layout.js'
 import { SITE, waLink } from '../site.js'
 
